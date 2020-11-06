@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Net;
@@ -6,10 +6,10 @@ using System.Net.Sockets;
 
 namespace GameServer
 {
-    
+
     class Client
     {
-        
+
         public static int dataBufferSize = 4096;
         public int id;
         public TCP tcp;
@@ -27,7 +27,7 @@ namespace GameServer
             private NetworkStream stream;
             private byte[] receiveBuffer;
 
-            public TCP(int -id)
+            public TCP(int _id)
             {
                 id = _id;
             }
@@ -46,7 +46,7 @@ namespace GameServer
                 stream.BeginRead(receiveBuffer, 0, dataBufferSize, ReceiveCallback, null);
             }
 
-            private void ReceiveCallback(IAsyncCallback _result)
+            private void ReceiveCallback(IAsyncResult _result)
             {
                 try
                 {
@@ -60,7 +60,7 @@ namespace GameServer
                     Array.Copy(receiveBuffer, _data, _byteLength);
 
 
-                    stream.BeginRead(receiveBuffer, 0, dataBufferSize, ReceiveCallback, null)
+                    stream.BeginRead(receiveBuffer, 0, dataBufferSize, ReceiveCallback, null);
                 }
                 catch (Exception _ex)
                 {
