@@ -2,12 +2,12 @@
 using System.Threading;
 
 namespace GameServer
-{   
+{
     class Program
     {
 
         private static bool isRunning = false;
-        
+
         static void Main(string[] args)
         {
             Console.Title = "GameServer";
@@ -18,7 +18,7 @@ namespace GameServer
 
             Server.Start(50, 26950);
 
-            
+
         }
 
         private static void MainThread()
@@ -43,5 +43,4 @@ namespace GameServer
         }
 
     }
-
 }
