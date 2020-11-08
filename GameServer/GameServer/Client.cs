@@ -38,6 +38,7 @@ namespace GameServer
             public void Connect(TcpClient _socket)
             {
 
+
                 socket = _socket;
                 socket.ReceiveBufferSize = dataBufferSize;
                 socket.SendBufferSize = dataBufferSize;

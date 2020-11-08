@@ -9,7 +9,7 @@ namespace GameServer
         private static void SendTCPData(int _toClient, Packet _packet)
         {
             _packet.WriteLength();
-            Server.clients[_toClient].udp.SendData(_packet);
+            Server.clients[_toClient].tcp.SendData(_packet);
         }
 
         private static void SendTCPDataToAll(Packet _packet)
@@ -36,7 +36,7 @@ namespace GameServer
         private static void SendUDPData(int _toClient, Packet _packet)
         {
             _packet.WriteLength();
-            Server.clients[_toClient].tcp.SendData(_packet);
+            Server.clients[_toClient].udp.SendData(_packet);
         }
 
         private static void SendUDPDataToAll(Packet _packet)
@@ -66,7 +66,7 @@ namespace GameServer
             {
                 _packet.Write(_msg);
                 _packet.Write(_toClient);
-
+                
                 SendTCPData(_toClient, _packet);
             }
         }
