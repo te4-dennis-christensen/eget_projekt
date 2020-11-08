@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "knAFM/v0Fs54YlTAmfBXLjCrHB5jaWvqcVVZWPWgYN8zTdxF0rg95FUmMrfKf++aS8IiCH53Peie7/uec83/Mg==",
+  "dgSpecHash": "mUotiyJHATm5vu6ypBx+qjUcX0p4kWAMaVJKq7h9JKmZo/bqHv82GIl3wKoe9ZodbFZ+TpoghrahwknO9ldfAg==",
   "success": true,
   "projectFilePath": "/Users/dennis.christensen/Documents/GitHub/eget_projekt/GameServer/GameServer/GameServer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/dennis.christensen/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
